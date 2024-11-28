@@ -11,17 +11,15 @@ void main() {
     });
 
     test('Calculate function for x = 1', () {
-      final result = calculator.calculate(1);
-      expect(result, equals(-8.0)); // Виправлене очікуване значення
+      expect(calculator.calculate(1), equals(-8.0));
     });
 
     test('Calculate function for x = 2', () {
       expect(calculator.calculate(2), equals(35));
     });
 
-    test('Tabulate function from 0 to 2 with step 1', () {
-      final result = calculator.tabulate(0, 2, 1);
-      expect(result, equals([-9, -8, 35]));
+    test('Tabulate function', () {
+      expect(calculator.tabulate(0, 2, 1), equals([-9, -8, 35]));
     });
   });
 
